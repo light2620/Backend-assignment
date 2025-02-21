@@ -5,7 +5,6 @@ import { setEmail } from "../redux/user.slice";
 const fetchUser = async (dispatch) => {
     try {
         const response = await getUserDetailsApi();
-
         dispatch(setName(response.data.data.name));
         dispatch(setEmail(response.data.data.email));
 
