@@ -4,7 +4,7 @@ import { axiosInstance } from "./axiosInstance";
 const loginApi = async(data)=>{
     try{
         console.log(data)
-            const response = await axiosInstance.post("user/login",data)
+            const response = await axiosInstance.post("/edgistify/user/login",data)
             localStorage.setItem("authenticate",`Bearer ${response.data.token}`)
             return response;
     }catch(err){
@@ -16,7 +16,7 @@ const loginApi = async(data)=>{
 const registerApi = async(data)=>{
     try{
         
-            const response = await axiosInstance.post("user/register",data)
+            const response = await axiosInstance.post("/edgistify/user/register",data)
             return response;
     }catch(err){
         throw err;
