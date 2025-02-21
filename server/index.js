@@ -13,9 +13,10 @@ const app = express();
 app.use(cors());
 app.use(express.json())
 
-app.get("/",()=> {
-    console.log("welcome to edgistify");
-})
+app.get("/", (req, res) => {
+  
+    res.send("welcome"); 
+});
 
 app.use("/edgistify/user",userRouter);
 app.use("/edgistify/cart",cartRouter);
