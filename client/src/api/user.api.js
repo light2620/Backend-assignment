@@ -25,7 +25,7 @@ const registerApi = async(data)=>{
 
 const getUserDetailsApi = async()=>{
     try{
-        const response = await axiosInstance.get("user/user")
+        const response = await axiosInstance.get("/edgistify/user/user")
         return response;
     }catch(err){
         throw err
