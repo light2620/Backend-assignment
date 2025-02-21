@@ -30,7 +30,7 @@ const Header = () => {
             <div className="container mx-auto">
                 <nav className="flex items-center justify-between">
                     <div className="text-7xl font-bold text-emerald-500 ">
-                        Edgistify
+                        <Link to="/">Edgistify</Link>
                     </div>
                     <div className="flex items-center gap-10">
                         {userName ? <div className="relative" onClick={() => setUserModel(!userModel)}>
